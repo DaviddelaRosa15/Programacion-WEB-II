@@ -1,0 +1,13 @@
+Pasos para correr aplicación en docker
+
+#1- Inicia docker desktop
+
+#2- Abre la terminal y coloca el comando cd ${PATH}\Práctica 3\MiniWebAppORM
+
+#3. Ejecuta el comando docker-compose build
+
+#3. Ejecuta docker compose up -d
+
+#4. Ejecuta dotnet ef database update
+
+#5. Ve a http://localhost:8080/ en tu navegador de preferencia
