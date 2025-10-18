@@ -1,4 +1,5 @@
 ﻿using BookSwap.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookSwap.Controllers
@@ -39,6 +40,7 @@ namespace BookSwap.Controllers
 
         // ACCIÓN 3: Compartir (GET - Muestra el formulario)
         [HttpGet]
+        [Authorize] // 👈 Proteger ambas acciones
         public IActionResult Compartir()
         {
             return View();
@@ -46,6 +48,7 @@ namespace BookSwap.Controllers
 
         // ACCIÓN 4: Compartir (POST - Procesa el envío del formulario)
         [HttpPost]
+        [Authorize] // 👈 Proteger el envío de datos
         public IActionResult Compartir(Libro nuevoLibro)
         {
             if (ModelState.IsValid)
